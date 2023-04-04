@@ -9,8 +9,16 @@
 /* Begin PBXBuildFile section */
 		A8F105C229DC00E500CFCE78 /* AsyncNetworking.docc in Sources */ = {isa = PBXBuildFile; fileRef = A8F105C129DC00E500CFCE78 /* AsyncNetworking.docc */; };
 		A8F105C829DC00E500CFCE78 /* AsyncNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F105BD29DC00E500CFCE78 /* AsyncNetworking.framework */; };
-		A8F105CD29DC00E500CFCE78 /* AsyncNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F105CC29DC00E500CFCE78 /* AsyncNetworkingTests.swift */; };
 		A8F105CE29DC00E500CFCE78 /* AsyncNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = A8F105C029DC00E500CFCE78 /* AsyncNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8F105DD29DC012700CFCE78 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F105D929DC012700CFCE78 /* DataTransferService.swift */; };
+		A8F105DE29DC012700CFCE78 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F105DC29DC012700CFCE78 /* NetworkService.swift */; };
+		A8F105DF29DC012700CFCE78 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F105DA29DC012700CFCE78 /* NetworkConfig.swift */; };
+		A8F105E029DC012700CFCE78 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F105DB29DC012700CFCE78 /* Endpoint.swift */; };
+		A8F105E329DC04B400CFCE78 /* EndPointMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F105E229DC04B400CFCE78 /* EndPointMock.swift */; };
+		A8F105E529DC04C300CFCE78 /* NetworkConfigurableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F105E429DC04C300CFCE78 /* NetworkConfigurableMock.swift */; };
+		A8F105E729DC04CB00CFCE78 /* NetworkSessionManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F105E629DC04CB00CFCE78 /* NetworkSessionManagerMock.swift */; };
+		A8F105EA29DC051E00CFCE78 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F105E829DC051E00CFCE78 /* NetworkServiceTests.swift */; };
+		A8F105EB29DC051E00CFCE78 /* DataTransferServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F105E929DC051E00CFCE78 /* DataTransferServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +36,15 @@
 		A8F105C029DC00E500CFCE78 /* AsyncNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncNetworking.h; sourceTree = "<group>"; };
 		A8F105C129DC00E500CFCE78 /* AsyncNetworking.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AsyncNetworking.docc; sourceTree = "<group>"; };
 		A8F105C729DC00E500CFCE78 /* AsyncNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8F105CC29DC00E500CFCE78 /* AsyncNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncNetworkingTests.swift; sourceTree = "<group>"; };
+		A8F105D929DC012700CFCE78 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		A8F105DA29DC012700CFCE78 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		A8F105DB29DC012700CFCE78 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		A8F105DC29DC012700CFCE78 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A8F105E229DC04B400CFCE78 /* EndPointMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointMock.swift; sourceTree = "<group>"; };
+		A8F105E429DC04C300CFCE78 /* NetworkConfigurableMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfigurableMock.swift; sourceTree = "<group>"; };
+		A8F105E629DC04CB00CFCE78 /* NetworkSessionManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSessionManagerMock.swift; sourceTree = "<group>"; };
+		A8F105E829DC051E00CFCE78 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		A8F105E929DC051E00CFCE78 /* DataTransferServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTransferServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +88,10 @@
 			isa = PBXGroup;
 			children = (
 				A8F105C029DC00E500CFCE78 /* AsyncNetworking.h */,
+				A8F105D929DC012700CFCE78 /* DataTransferService.swift */,
+				A8F105DB29DC012700CFCE78 /* Endpoint.swift */,
+				A8F105DA29DC012700CFCE78 /* NetworkConfig.swift */,
+				A8F105DC29DC012700CFCE78 /* NetworkService.swift */,
 				A8F105C129DC00E500CFCE78 /* AsyncNetworking.docc */,
 			);
 			path = AsyncNetworking;
@@ -80,9 +100,21 @@
 		A8F105CB29DC00E500CFCE78 /* AsyncNetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				A8F105CC29DC00E500CFCE78 /* AsyncNetworkingTests.swift */,
+				A8F105E129DC049800CFCE78 /* Mocks */,
+				A8F105E929DC051E00CFCE78 /* DataTransferServiceTests.swift */,
+				A8F105E829DC051E00CFCE78 /* NetworkServiceTests.swift */,
 			);
 			path = AsyncNetworkingTests;
+			sourceTree = "<group>";
+		};
+		A8F105E129DC049800CFCE78 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A8F105E229DC04B400CFCE78 /* EndPointMock.swift */,
+				A8F105E429DC04C300CFCE78 /* NetworkConfigurableMock.swift */,
+				A8F105E629DC04CB00CFCE78 /* NetworkSessionManagerMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F105DD29DC012700CFCE78 /* DataTransferService.swift in Sources */,
+				A8F105DE29DC012700CFCE78 /* NetworkService.swift in Sources */,
+				A8F105DF29DC012700CFCE78 /* NetworkConfig.swift in Sources */,
 				A8F105C229DC00E500CFCE78 /* AsyncNetworking.docc in Sources */,
+				A8F105E029DC012700CFCE78 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8F105CD29DC00E500CFCE78 /* AsyncNetworkingTests.swift in Sources */,
+				A8F105EA29DC051E00CFCE78 /* NetworkServiceTests.swift in Sources */,
+				A8F105E529DC04C300CFCE78 /* NetworkConfigurableMock.swift in Sources */,
+				A8F105EB29DC051E00CFCE78 /* DataTransferServiceTests.swift in Sources */,
+				A8F105E729DC04CB00CFCE78 /* NetworkSessionManagerMock.swift in Sources */,
+				A8F105E329DC04B400CFCE78 /* EndPointMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +434,7 @@
 		A8F105D529DC00E500CFCE78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -409,6 +450,7 @@
 		A8F105D629DC00E500CFCE78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
