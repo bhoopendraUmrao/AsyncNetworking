@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name             = 'AsyncNetworking'
-  s.version          = '0.0.1'
+  s.name             = 'AsyncAwaitNetworking'
+  s.version          = '0.0.2'
   s.summary          = 'URLSession Wrapper with async await' 
 
   s.description      = <<-DESC
