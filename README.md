@@ -25,11 +25,12 @@
 
 ```swift
 struct APIEndpoints {
-    static func getMovies(with moviesRequestDTO: MoviesRequest) -> Endpoint<MoviesResponse> {
-        return Endpoint(path: "search/movie/",
-                        method: .get,
-                        headerParamaters: ["Content-Type": "application/json"], // Optional
-                        queryParametersEncodable: moviesRequestDTO)
+    static func getCurrentWeather(with request: WeatherRequest) -> Endpoint<RealtimeWeatherResponse> {
+        let endpoint = Endpoint<RealtimeWeatherResponse>(
+            path: "/weather/realtime",
+            method: .get,
+            queryParametersEncodable: ["location": request.city]
+        )
     }
 }
 ```
@@ -37,27 +38,41 @@ struct APIEndpoints {
 **API Data (Data Transfer Objects)**:
 
 ```swift
-struct MoviesRequest: Encodable {
-    let query: String
-    let page: Int
+struct WeatherRequest: Encodable {
+    let city: String
 }
 
-struct MoviesResponse: Decodable {
-    struct Movie: Decodable {
-        private enum CodingKeys: String, CodingKey {
-            case title
-            case overview
-            case posterPath = "poster_path"
-        }
-        let title: String
-        let overview: String
-        let posterPath: String
+struct RealtimeWeatherResponse: Decodable {
+
+    struct WeatherData: Decodable {
+        let time: String?
+        let values: Weather?
     }
 
-    private enum CodingKeys: String, CodingKey {
-        case movies = "results"
+    struct Location: Decodable {
+        let name: String?
+        let lat: Double?
+        let lon: Double?
     }
-    let movies: [Movie]
+    
+    struct Weather: Decodable {
+        let temperature: Float?
+        let windSpeed: Float?
+        let windDirection: Float?
+        let pressureSurfaceLevel: Float?
+        let precipitationProbability: Float?
+        let humidity: Float?
+        let cloudCover: Float?
+        let uvIndex: Float?
+        let visibility: Float?
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case location
+        case weather = "data"
+    }
+    let location: Location?
+    let weather: WeatherData?
 }
 ```
 **API Networking Configuration**:
@@ -87,8 +102,12 @@ class DIContainer {
 **Making API call**:
 
 ```swift
-let endpoint = APIEndpoints.getMovies(with: MoviesRequest(query: "Batman Begins", page: 1))
-return try await dataTransferService.request(with: endpoint)
+let endpoint = Endpoint<RealtimeWeatherResponse>(
+            path: "/weather/realtime",
+            method: .get,
+            queryParametersEncodable: ["location": query]
+        )
+ return try await dataTransferService.request(with: endpoint)
 ```
 
 
