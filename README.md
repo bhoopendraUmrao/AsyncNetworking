@@ -1,5 +1,4 @@
 # AsyncNetworking
-# SENetworking
 
 [![CocoaPods](https://img.shields.io/cocoapods/v/SENetworking)](https://cocoapods.org/pods/AsyncAwaitNetworking)
 [![Swift 5](https://img.shields.io/badge/compatible-swift%205.0%20-orange.svg)](https://cocoapods.org/pods/AsyncAwaitNetworking)
